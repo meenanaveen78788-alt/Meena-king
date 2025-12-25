@@ -157,8 +157,8 @@ try:
     user_id = profile["data"]["id"]
     HEADERS["userid"] = user_id
 
-    key = "".join(key_chars[int(i)] for i in (user_id + "1524567456436545")[:16]).encode()
-    iv = "".join(iv_chars[int(i)] for i in (user_id + "1524567456436545")[:16]).encode()
+    key = "".join(key_chars[int(i)] for i in (user_id + "7333288503")[:16]).encode()
+    iv = "".join(iv_chars[int(i)] for i in (user_id + "7333288503")[:16]).encode()
 
 except Exception as e:
     handle_error("Failed to retrieve user profile", e)
@@ -250,3 +250,4 @@ for i in dr3.get("data", []):
         handle_error(f"Missing key in response data: {e}")
     except Exception as e:
         handle_error("An error occurred while processing data", e)
+
